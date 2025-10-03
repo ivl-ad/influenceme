@@ -22,27 +22,35 @@
     header {
       background: var(--gradient-bg);
       color: #fff;
-      padding: 20px 20px 60px;
-      position: relative;
-      text-align: center;
+      padding: 40px 20px;
     }
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
+    .header-container {
+      display: flex;
+      align-items: center;   /* vertical centering */
+      justify-content: center;
+      max-width: 1200px;
+      margin: auto;
+      gap: 40px;
+      flex-wrap: wrap;
     }
     .logo img {
-      width: 200px;
+      width: 200px;   /* enlarged logo */
       height: auto;
+      display: block;
     }
-    header h1 {
+    .header-content {
+      text-align: left;
+      flex: 1;
+      min-width: 280px;
+    }
+    .header-content h1 {
       font-size: 3em; margin: 0;
     }
-    header p {
+    .header-content p {
       font-size: 1.2em; margin-top: 10px;
     }
     .cta-buttons a {
-      display: inline-block; margin: 15px 10px; padding: 14px 28px;
+      display: inline-block; margin: 15px 10px 0 0; padding: 14px 28px;
       background: var(--cta-color); color: #fff; text-decoration: none;
       border-radius: 50px; font-weight: bold; transition: background 0.3s;
     }
@@ -99,27 +107,34 @@
 
     /* MOBILE */
     @media (max-width: 768px) {
-      header h1 { font-size: 2.2em; }
-      .logo {
-        position: static;
-        display: block;
-        margin: 0 auto 20px;
+      .header-container {
+        flex-direction: column;
+        text-align: center;
       }
-      header { padding-top: 40px; }
+      .header-content {
+        text-align: center;
+      }
+      .header-content h1 {
+        font-size: 2.2em;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">
-    <img src="logo2.png" alt="Influence Me Logo">
-  </div>
-  <h1>Influence Me</h1>
-  <p>Affordable, authentic influence for startups and creators</p>
-  <div class="cta-buttons">
-    <a href="#startups">For Startups</a>
-    <a href="#creators">For Creators</a>
+  <div class="header-container">
+    <div class="logo">
+      <img src="logo2.png" alt="Influence Me Logo">
+    </div>
+    <div class="header-content">
+      <h1>Influence Me</h1>
+      <p>Affordable, authentic influence for startups and creators</p>
+      <div class="cta-buttons">
+        <a href="#startups">For Startups</a>
+        <a href="#creators">For Creators</a>
+      </div>
+    </div>
   </div>
 </header>
 
