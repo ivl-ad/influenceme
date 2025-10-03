@@ -17,13 +17,23 @@
       margin: 0; font-family: 'Segoe UI', sans-serif; line-height: 1.6;
       color: var(--text-color); background: #fffaf7;
     }
+
+    /* HEADER */
     header {
       background: var(--gradient-bg);
-      color: #fff; text-align: center;
-      padding: 80px 20px 60px;
+      color: #fff;
+      padding: 20px 20px 60px;
+      position: relative;
+      text-align: center;
     }
-    header img {
-      width: 120px; height: auto; margin-bottom: 20px;
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .logo img {
+      width: 200px;
+      height: auto;
     }
     header h1 {
       font-size: 3em; margin: 0;
@@ -39,6 +49,8 @@
     .cta-buttons a:hover {
       background: var(--cta-hover);
     }
+
+    /* NAV */
     nav {
       background: #fff4ec; text-align: center; padding: 12px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -47,6 +59,8 @@
     nav a {
       color: #ff6a5b; margin: 0 15px; text-decoration: none; font-weight: bold;
     }
+
+    /* SECTIONS */
     section {
       padding: 60px 20px; max-width: 1100px; margin: auto;
     }
@@ -68,15 +82,13 @@
     .card:hover {
       transform: translateY(-5px);
     }
-    ul {
-      padding-left: 18px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    a {
-      color: #ff6a5b;
-    }
+
+    /* GENERAL */
+    ul { padding-left: 18px; }
+    li { margin-bottom: 8px; }
+    a { color: #ff6a5b; }
+
+    /* FOOTER */
     footer {
       background: #ff6a5b; color: #fff; text-align: center;
       padding: 40px 20px; font-size: 0.95em;
@@ -84,16 +96,25 @@
     footer a {
       color: #fff; text-decoration: underline;
     }
+
+    /* MOBILE */
     @media (max-width: 768px) {
-      .two-col { flex-direction: column; }
       header h1 { font-size: 2.2em; }
+      .logo {
+        position: static;
+        display: block;
+        margin: 0 auto 20px;
+      }
+      header { padding-top: 40px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="logo2.png" alt="Influence Me Logo">
+  <div class="logo">
+    <img src="logo2.png" alt="Influence Me Logo">
+  </div>
   <h1>Influence Me</h1>
   <p>Affordable, authentic influence for startups and creators</p>
   <div class="cta-buttons">
