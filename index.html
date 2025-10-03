@@ -17,48 +17,28 @@
       margin: 0; font-family: 'Segoe UI', sans-serif; line-height: 1.6;
       color: var(--text-color); background: #fffaf7;
     }
-
-    /* HEADER */
     header {
       background: var(--gradient-bg);
-      color: #fff;
-      padding: 40px 20px;
+      color: #fff; text-align: center;
+      padding: 80px 20px 60px;
     }
-    .header-container {
-      display: flex;
-      align-items: center;   /* vertical centering */
-      justify-content: center;
-      max-width: 1200px;
-      margin: auto;
-      gap: 40px;
-      flex-wrap: wrap;
+    header img {
+      width: 120px; height: auto; margin-bottom: 20px;
     }
-    .logo img {
-      width: 200px;   /* enlarged logo */
-      height: auto;
-      display: block;
-    }
-    .header-content {
-      text-align: left;
-      flex: 1;
-      min-width: 280px;
-    }
-    .header-content h1 {
+    header h1 {
       font-size: 3em; margin: 0;
     }
-    .header-content p {
+    header p {
       font-size: 1.2em; margin-top: 10px;
     }
     .cta-buttons a {
-      display: inline-block; margin: 15px 10px 0 0; padding: 14px 28px;
+      display: inline-block; margin: 15px 10px; padding: 14px 28px;
       background: var(--cta-color); color: #fff; text-decoration: none;
       border-radius: 50px; font-weight: bold; transition: background 0.3s;
     }
     .cta-buttons a:hover {
       background: var(--cta-hover);
     }
-
-    /* NAV */
     nav {
       background: #fff4ec; text-align: center; padding: 12px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -67,8 +47,6 @@
     nav a {
       color: #ff6a5b; margin: 0 15px; text-decoration: none; font-weight: bold;
     }
-
-    /* SECTIONS */
     section {
       padding: 60px 20px; max-width: 1100px; margin: auto;
     }
@@ -90,13 +68,15 @@
     .card:hover {
       transform: translateY(-5px);
     }
-
-    /* GENERAL */
-    ul { padding-left: 18px; }
-    li { margin-bottom: 8px; }
-    a { color: #ff6a5b; }
-
-    /* FOOTER */
+    ul {
+      padding-left: 18px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    a {
+      color: #ff6a5b;
+    }
     footer {
       background: #ff6a5b; color: #fff; text-align: center;
       padding: 40px 20px; font-size: 0.95em;
@@ -104,37 +84,21 @@
     footer a {
       color: #fff; text-decoration: underline;
     }
-
-    /* MOBILE */
     @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        text-align: center;
-      }
-      .header-content {
-        text-align: center;
-      }
-      .header-content h1 {
-        font-size: 2.2em;
-      }
+      .two-col { flex-direction: column; }
+      header h1 { font-size: 2.2em; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="header-container">
-    <div class="logo">
-      <img src="logo2.png" alt="Influence Me Logo">
-    </div>
-    <div class="header-content">
-      <h1>Influence Me</h1>
-      <p>Affordable, authentic influence for startups and creators</p>
-      <div class="cta-buttons">
-        <a href="#startups">For Startups</a>
-        <a href="#creators">For Creators</a>
-      </div>
-    </div>
+  <img src="logo2.png" alt="Influence Me Logo">
+  <h1>Influence Me</h1>
+  <p>Affordable, authentic influence for startups and creators</p>
+  <div class="cta-buttons">
+    <a href="#startups">For Startups</a>
+    <a href="#creators">For Creators</a>
   </div>
 </header>
 
